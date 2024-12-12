@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Result Sharing</title>
+</head>
+<body>
+  <h1>Quiz Results</h1>
+  <p id="result">You scored 85% on the quiz!</p>
+  <button id="shareBtn">Share Your Result</button>
+
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', () => {
+      const resultText = document.getElementById('result').innerText;
+
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        navigator.share({
+          title: 'My Quiz Results',
+          text: resultText,
+          url: window.location.href, // Optional: Share the page URL
+        })
+        .then(() => console.log('Result shared successfully!'))
+        .catch(error => console.error('Error sharing:', error));
+      } else {
+        // Fallback: Share via social media links
+        const encodedResult = encodeURIComponent(resultText);
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodedResult}`;
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedResult}&url=${encodeURIComponent(window.location.href)}`;
+        const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`;
+        
+        // Display links or redirect to a platform
+        const shareMessage = `
+          Share your results on:
+          <a href="${facebookUrl}" target="_blank">Facebook</a> |
+          <a href="${twitterUrl}" target="_blank">Twitter</a> |
+          <a href="${linkedinUrl}" target="_blank">LinkedIn</a>
+        `;
+        document.body.innerHTML += `<p>${shareMessage}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
