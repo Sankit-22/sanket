@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=uiOdJVUK"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+      function toggleLanguage(lang) {
+            const englishElements = document.querySelectorAll('.en');
+            const hindiElements = document.querySelectorAll('.hi');
+
+            if (lang === 'en') {
+                englishElements.forEach(el => el.style.display = 'block');
+                hindiElements.forEach(el => el.style.display = 'none');
+            } else {
+                englishElements.forEach(el => el.style.display = 'none');
+                hindiElements.forEach(el => el.style.display = 'block');
+            }
+        }
+  function playSpeech() {
+    var text = "Athletes can be tested any time, anywhere. Testing can take place in-competition, out-of-competition, at training venues or even at an athlete's home or place of current residence. Testing will be conducted with no advanced notice.";
+    responsiveVoice.speak(text);
+  }
+  function stopspeech(){
+    responsiveVoice.cancel();
+  }
+  function playdelaySpeech(){
+    let text="To participate in a medal ceremony To fulfill media commitments Compete in further competition Warm-down Get medical treatment Locate an interpreter Any other exceptional circumstances which may be justified  and which shall be documented"
+    responsiveVoice.speak(text);
+  }
+  function stopdelayspeech(){
+    responsiveVoice.cancel();
+  }
+  </script>
+    <style>
+      /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* General styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Navigation bar styling */
+.custom-navbar {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 2px solid #BEBEBE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left list */
+.left-list {
+  display: flex;
+  align-items: center;
+}
+
+.left-list button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.left-list img {
+  height: 25px;
+  margin-left: 10px;
+}
+
+/* Right list */
+.right-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.right-list .item-1,
+.right-list .item-2,
+.right-list .item-3,
+.right-list .item-4,
+.right-list .item-5,
+.right-list .item-6 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.right-list .item-1:hover,
+.right-list .item-2:hover,
+.right-list .item-3:hover,
+.right-list .item-4:hover,
+.right-list .item-5:hover,
+.right-list .item-6:hover {
+  border-bottom: 2px solid #27C5FF;
+  color: #27C5FF;
+}
+
+/* Hero image styling */
+.img1 {
+  margin-top: 60px; /* Space for fixed navbar */
+  width: 100%;
+  position: relative;
+}
+
+.img1 img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.img1 .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  font-size: 8vw; /* Responsive font size */
+  text-align: center;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Media Queries */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .right-list {
+      display: none; /* Hide menu items on smaller screens */
+  }
+
+  .left-list {
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .custom-navbar {
+      padding: 10px 15px;
+  }
+
+  .img1 .text {
+      font-size: 12vw; /* Adjust text size for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .left-list button img {
+      height: 20px;
+  }
+
+  .img1 .text {
+      font-size: 16vw; /* Adjust text size for very small screens */
+  }
+}
+
+
+.text-body-emphasis {
+    font-size: 60px;
+}
+#pg {
+    font-size: 30px;
+    color: rgb(143, 145, 145);
+}
+  /* Hover effect for boxes */
+  .col1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);;
+  }
+
+  /* Hover effect for buttons */
+  .btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    .row1 {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .col1 {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .col1 {
+      width: 100% !important;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+    .icon-square {
+      width: 50px;
+      height: 50px;
+    }
+    h4.fs-2 {
+      font-size: 18px;
+    }
+    .btn {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+    .btn-primary:hover {
+        background-color: #004085;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(13, 110, 253, 0.3);
+        }
+      
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Main container styling */
+/* Main Container */
+.main-div {
+    width: 100%;
+    max-width: 1600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
+  }
+  
+  /* Heading styling */
+  .heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* Flex container for sub-divs */
+  .sub-divs {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures sub-divs stack on smaller screens */
+  }
+  
+  /* Individual sub-div styling */
+  .sub-div {
+    flex: 1 1 calc(45% - 20px); /* Allows sub-divs to take 45% width with spacing */
+    min-width: 250px; /* Ensures a minimum size for small screens */
+    height: 130px;
+    padding: 15px;
+    background-color: #2d2d2d;
+    border: 3px solid #fcb400;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    overflow: hidden;
+  }
+  
+  /* Sub2-div inside sub-div */
+  .sub2-div {
+    padding: 10px;
+    border: 0.5px solid goldenrod;
+    border-radius: 10px;
+    height: 165px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Hover effect on sub2-div */
+  .sub2-div:hover {
+    height: 470px; /* Expands sub-div on hover */
+  }
+  
+  /* Styling for text inside sub-div */
+  .sub-div p {
+    margin: 0;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  /* Hidden text inside sub-div */
+  .hidden-text {
+    display: none;
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #ffc107; /* Highlighted color for hidden text */
+  }
+  
+  /* On hover: sub-div expands */
+  .sub-div:hover {
+    height: 430px; /* Double the initial height */
+  }
+  
+  /* On hover: show hidden text */
+  .sub-div:hover .hidden-text {
+    display: block; /* Hidden text becomes visible */
+    animation: fadeIn 0.3s ease-in-out; /* Optional fade-in effect */
+  }
+  
+  /* Keyframe animation for fading in text */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sub-divs {
+      flex-direction: column; /* Stack sub-divs vertically */
+      align-items: center;
+    }
+  
+    .sub-div {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    /* When hovering, adjust the height for smaller screens */
+    .main-div:hover {
+      max-height: 600px; /* Ensure the height doesn't grow too much on smaller screens */
+    }
+  
+    .sub-div:hover {
+      height: 300px; /* Adjust the hover size for sub-divs on small screens */
+    }
+  }
+
+
+
+
+  /* Styling for the main container */
+.main3-div {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the sub-sub-div container */
+.sub32-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for each sub-sub-div */
+.sub-sub-div {
+    background-color: #2c2c2c;
+    border: 2px solid #fcb400;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Ensures the hidden text stays within bounds */
+    height: 70px; /* Initial height */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+}
+
+/* Styling for the main visible text */
+.main-text1 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Styling for the hidden text */
+.hidden-text1 {
+    font-size: 0.9rem;
+    color: #fcb400;
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    opacity: 0; /* Set opacity to 0 for smooth transition */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+}
+
+/* Show hidden text on hover */
+.sub-sub-div:hover .hidden-text1 {
+    display: block; /* Make the hidden text visible */
+    opacity: 1; /* Fade in the text */
+}
+
+/* Optional: Add some hover effect to expand the div */
+.sub-sub-div:hover {
+    background-color: #333; /* Darken background color on hover */
+    border-color: #ffcc00; /* Change border color on hover */
+    height: 450px; /* Expand the height smoothly */
+}
+
+
+
+.dropdown-container {
+  display: flex; /* Arrange items in a row */
+  gap: 20px; /* Spacing between dropdowns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Dropdown Component */
+.dropdown {
+  width: 320px; /* Fixed width for consistent layout */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white; /* Clean white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown:hover {
+  transform: translateY(-4px); /* Slight elevation effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Header */
+.dropdown-header {
+  background-color: #ffffff;
+  color: #333333; /* Darker text for better contrast */
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-header:hover {
+  background-color: #f8f9fa; /* Slightly lighter background for hover */
+  color: #007bff; /* Accent color for hover */
+}
+
+/* Dropdown Header Arrow */
+.dropdown-header .arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease, color 0.2s ease;
+  color: #666666;
+}
+
+.dropdown.open .dropdown-header .arrow {
+  transform: rotate(180deg); /* Flip arrow on open */
+  color: #007bff; /* Match accent color */
+}
+
+/* Dropdown Body */
+.dropdown-body {
+  background-color: #ffffff;
+  color: #555555; /* Softer text color */
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Open Dropdown */
+.dropdown.open .dropdown-body {
+  max-height: 500px; /* Dynamic height based on content */
+  opacity: 1;
+  padding: 15px 20px; /* Add padding smoothly */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dropdown-container {
+      flex-wrap: wrap; /* Wrap items to the next row on smaller screens */
+      gap: 15px;
+  }
+  .dropdown {
+      width: 100%; /* Full width for smaller screens */
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: rgb(32, 27, 27);
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: start;
+}
+
+.img {
+  place-self: center;
+}
+
+.img img {
+  border-radius: 20%;
+  max-width: 100px;
+}
+
+.contact-us, .links, .follow-us {
+  text-align: center;
+}
+
+.contact-us section {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.links ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links ul li {
+  padding: 5px 0;
+  color: white;
+}
+
+.follow-us ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.follow-us ul li img {
+  height: 30px;
+  margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+  }
+
+  .img {
+      grid-column: span 2;
+  }
+
+  .contact-us, .links, .follow-us {
+      text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+  }
+
+  .img img {
+      max-width: 80px;
+  }
+
+  .contact-us section {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .links ul {
+      padding: 0;
+  }
+
+  .links ul li {
+      text-align: center;
+      padding: 5px 0;
+  }
+
+  .follow-us ul {
+      flex-direction: row;
+      gap: 10px;
+  }
+
+  .follow-us ul li img {
+      margin: 5px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+.img2 {
+  margin-top: 60px; /* Space for fixed navbar */
+  width: 100%; /* Full width of the container */
+  position: relative;
+}
+
+.img2 img {
+  width: 100%; /* Scale image width to the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 480px; /* Limit maximum height */
+  object-fit: cover; /* Crop or scale image to fit nicely */
+}
+    </style>
+</head>
+<body onload="toggleLanguage('en')" >
+  <div class="language-toggle" style="margin-top: 80px;">
+    <button onclick="toggleLanguage('en')">English</button>
+    <button onclick="toggleLanguage('hi')">हिन्दी</button>
+</div>
+  <div class="custom-navbar">
+    <div class="left-list"> <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="icon.svg" alt=""></button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title en" id="offcanvasWithBothOptionsLabel">Welcome to Anti-Doping</h5>
+            <h5 class="hi" style="display:none;">एंटी-डोपिंग में आपका स्वागत है</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p class="en">Ensuring a dopefree environment for athletes and sports</p>
+            <p class="hi" style="display:none;">एथलीटों और खेलों के लिए नशामुक्त वातावरण सुनिश्चित करना</p>
+            <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_result.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Result Management</a></button>
+              </div><br>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_resources.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Resources</a></button>
+              </div><br>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_testing.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Athlete Testing</a></button>
+              </div><br>
+            
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Awareness and health risks</a></button>
+              </div><br>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Antidoping Disciplinary panel</a></button>
+              </div><br>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Educational videos</a></button>
+              </div>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index-tue.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Therapeutic Use Exemption</a></button>
+              </div>
+              <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="https://docs.google.com/forms/d/1IpUZLCEWSLM-SlGfUqPGC4GBnnVWrfMVqBVOrTHXGHk/edit" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Report And Feedback</a></button>
+              </div>
+          </div>
+        </div>DopingDefiance <a href="https://nadaindia.yas.gov.in/" style="margin-left: 30px;">
+            <img width="180" height="45" src="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png" class="attachment-large size-large wp-image-6456" alt="" srcset="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png 1024w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-300x89.png 300w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-768x229.png 768w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1536x458.png 1536w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1.png 1730w" sizes="(max-width: 800px) 100vw, 800px"></a></div>
+            <div class="right-list">
+              <div class="item-1"><a style="color: black; text-decoration: none;" href="index.html">HOME</a></div>
+              <div class="item-2"><a style="color: black; text-decoration: none;" href="index_about.html">ABOUT</a></div>
+              <div class="item-3"><a style="color: black; text-decoration: none;" href="index_edu.html">EDUCATION</a></div>
+              <div class="item-4"><a style="color: black; text-decoration: none;" href="index_blog.html">BLOG</a></div>
+              <div class="item-5"><a style="color: black; text-decoration: none;" href="index_news.html">NEWS</a></div>
+          </div>
+</div>
+     <div class="img1" style="margin-top: -116px;">
+      <img src="terrace-grain-Eg4DCqkDOKA-unsplash.jpg" alt="">
+      <div class="text">#SayNoToDoping</div>
+    </div>
+    <div class="p-5 text-center bg-body-tertiary" style="background-color: #4caf50; padding: 80px 20px; border-radius: 10px; color: white;">
+      <div class="container2 " style="max-width: 1100px; margin: 0 auto;">
+        <h1 class="en text-body-emphasis" style="font-size: 40px; font-weight: bold; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase;">Sample Collection & Testing Guide</h1>
+        <h1 class="hi text-body-emphasis" style="display: none; font-size: 40px; font-weight: bold; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase;">नमूना संग्रहण एवं परीक्षण मार्गदर्शिका</h1>
+        <p class="col-lg-8 mx-auto lead en" id="pg" style="font-size: 1.5rem; color:#343a40; line-height: 1.6; max-width: 800px;font-weight: 400;">
+          Athletes can be tested any time, anywhere. Testing can take place in-competition, out-of-competition, at training venues or even at an athlete's home or place of current residence. Testing will be conducted with no advanced notice.        </p>
+          <p class="hi" style="display:none; color: black;">एथलीटों का परीक्षण कभी भी, कहीं भी किया जा सकता है। परीक्षण प्रतियोगिता के दौरान, प्रतियोगिता से बाहर, प्रशिक्षण स्थलों पर या एथलीट के घर या वर्तमान निवास स्थान पर भी किया जा सकता है। परीक्षण बिना किसी पूर्व सूचना के किया जाएगा।</p>
+          <img src="speaker.svg" alt="" style="cursor: pointer;" onclick="playSpeech()">
+          <button class="stop" style="border: none; background-color: black; color: white; border-radius: 5px; width: 9vw; font-weight: bold; font-size: 16px;" onclick="stopspeech()">stop</button>
+      </div>
+    </div>
+</div>
+
+<div class="dropdown-container">
+  <div class="dropdown">
+      <div class="dropdown-header">
+          OUTLINE OF THE URINE TEST
+          <span class="arrow">▼</span>
+      </div>
+      <div class="en dropdown-header">
+          OUTLINE OF THE URINE TEST
+          <span class="arrow">▼</span>
+      </div>
+      <div class="hi dropdown-body" style="display: none;">
+          <p class="en">The urine test involves collecting a sample under controlled conditions to detect prohibited substances in an athlete's system.</p>
+          <p class="hi" style="display: none;">मूत्र परीक्षण में एथलीट के मूत्र प्रणाली में प्रतिबंधित पदार्थों का पता लगाने के लिए नियंत्रित परिस्थितियों में नमूना एकत्र किया जाता है।</p>
+          <img src="speaker.svg" alt="" style="cursor: pointer;" onclick="playurineSpeech()">
+          <button class="stop" style="border: none; background-color: black; color: white; border-radius: 5px; width: 9vw; font-weight: bold; font-size: 16px;" onclick="stopspeech()">stop</button>
+      </div>
+  </div>
+  <div class="dropdown">
+      <div class="dropdown-header">
+          OUTLINE OF THE BLOOD TEST
+          <span class="arrow">▼</span>
+      </div>
+      <div class="dropdown-body">
+          <p class="en">The blood test evaluates biological markers and detects prohibited substances in blood samples.</p>
+          <p class="hi" style="display: none;">रक्त परीक्षण जैविक मार्करों का मूल्यांकन करता है और रक्त के नमूनों में निषिद्ध पदार्थों का पता लगाता है</p>
+      </div>
+  </div>
+  <div class="dropdown">
+      <div class="dropdown-header">
+          ATHLETE BIOLOGICAL PASSPORT
+          <span class="arrow">▼</span>
+      </div>
+      <div class="dropdown-body">
+          <p class="en">The Athlete Biological Passport monitors selected variables over time to detect indirect markers of doping.</p>
+          <p class="hi" style="display: none;">एथलीट बायोलॉजिकल पासपोर्ट डोपिंग के अप्रत्यक्ष संकेतों का पता लगाने के लिए समय के साथ चयनित चरों पर नज़र रखता है।</p>
+      </div>
+  </div>
+</div>
+      
+      <div class="container3 col3-xxl-8 px-4 py-5" style="max-width: 1600px; margin: 0 auto;  background-color: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <div class="row3 flex-lg-row-reverse align-items-center g-5 py-5" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="col3-10 col3-sm-8 col3-lg-6" style="flex: 1; max-width: 100%; padding: 20px;">
+            <img src="female-gymnast-on-balance-beam.webp" class="d-block mx-lg-auto img-fluid" alt="Female Gymnast on Balance Beam" style="border-radius: 8px; max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" width="500" height="700" loading="lazy">
+          </div>
+          <div class="col3-lg-6" style="flex: 1; max-width: 100%; padding: 20px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+            <p class="lead en" style="font-size: 22px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              In-competition Testing is done in coordination with organizing bodies and federations. These could be:
+            </p>
+            <p class="lead hi" style=" display: none; font-size: 22px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              प्रतियोगिता के दौरान परीक्षण, आयोजन निकायों और महासंघों के समन्वय से किया जाता है। ये हो सकते हैं:
+            </p>
+            <ul style="font-size: 18px;">
+              <li>Medal finishers</li>
+                <li>Randomly selected athletes</li>
+            </ul>
+            <br><br>
+
+            <p class="lead en" style="font-size: 20px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              A valid delay for testing may include: 
+            </p>
+            <p class="lead hi" style=" display: none; font-size: 20px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              परीक्षण के लिए वैध विलंब में निम्नलिखित शामिल हो सकते हैं: 
+            </p>
+            <img src="speaker.svg" alt="" style="cursor: pointer; width: 20px; height: 20px;" onclick="playdelaySpeech()">
+          <button class="stop" style="border: none; background-color: black; color: white; border-radius: 5px; width: 9vw; font-weight: bold; font-size: 16px;" onclick="stopdelayspeech()">stop</button>
+            <ul style="font-size: 18px;">
+              <li class="en">To participate in a medal ceremony</li>
+              <li class="hi" style="display: none;">पदक समारोह में भाग लेने के लिए</li>
+                <li class="en"> To fulfill media commitments</li>
+                <li class="hi" style="display: none;"> मीडिया प्रतिबद्धताओं को पूरा करने के लिए</li>
+                  <li class="en"> Compete in further competitions</li>
+                  <li class="hi" style="display: none;"> आगे की प्रतियोगिताओं में भाग लें</li>
+                    <li class="en">Warm-down</li>
+                    <li class="hi" style="display: none;">गर्मी कम करो</li>
+                      <li class="en">Get medical treatment</li>
+                      <li class="hi" style="display: none;">चिकित्सा उपचार प्राप्त करें</li>
+                        <li class="en">Locate an interpreter</li>
+                        <li class="hi" style="display: none;">दुभाषिया खोजें</li>
+                          <li class="en">Any other exceptional circumstances which may be justified, and which shall be documented</li>
+                          <li class="hi" style="display: none;">कोई अन्य असाधारण परिस्थितियाँ जो उचित हो सकती हैं, और जिनका दस्तावेजीकरण किया जाएगा</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container4 col4-xxl-8 px-4 py-5" style="max-width: 1600px; margin: 0 auto; background-color: #f4f4f4; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="row4 flex-lg-row align-items-center g-5 " style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="col4-10 col4-sm-8 col4-lg-6" style="flex: 1; max-width: 100%; padding: 20px;">
+            <img src="61e26b49c2153d7b15946368_field-hockey-stick-and-ball-2021-08-30-09-04-16-utc-min.jpg" 
+                 class="d-block mx-lg-auto img-fluid" 
+                 alt="Field Hockey Stick and Ball" 
+                 style="border-radius: 12px; max-width: 100%; height: auto; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);"
+                 width="500" height="700" loading="lazy">
+          </div>
+          <div class="col4-lg-6" style="flex: 1; max-width: 100%; padding: 10px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+            <p class="lead en" style="font-size: 22px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              Out-of-competition Testing is done to detect doping in sports that have potential for doping enhancement in training periods. Tests are conducted throughout the year, without prior notice, whether the athlete is competing at an event or not. They are done in regulation with World Anti-Doping Agency (WADA) standards. To maintain an effective anti-doping program, NADA India retains the right to test athletes at any time and location.
+              <br><br>
+             <b class="en">A valid delay for Out-of-Competition testing can include:</b>
+              <ul style="font-size: 18px;">
+                <li class="en">Locating a representative</li>
+                  <li class="en"> Completing a training session</li>
+                    <li class="en"> Receiving necessary medical treatment</li>
+                      <li class="en"> Obtaining photo identification</li>
+                        <li class="en">Any other reasonable circumstances approved by the officer</li>
+              </ul>
+            </p>
+            <p class="lead hi" style="display: none; font-size: 22px; color: #6c757d; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              प्रतियोगिता से बाहर परीक्षण उन खेलों में डोपिंग का पता लगाने के लिए किया जाता है जिनमें प्रशिक्षण अवधि में डोपिंग बढ़ने की संभावना होती है। परीक्षण पूरे वर्ष बिना किसी पूर्व सूचना के किए जाते हैं, चाहे एथलीट किसी प्रतियोगिता में भाग ले रहा हो या नहीं। वे विश्व डोपिंग रोधी एजेंसी (वाडा) के मानकों के अनुसार किए जाते हैं। एक प्रभावी डोपिंग रोधी कार्यक्रम को बनाए रखने के लिए, नाडा इंडिया किसी भी समय और स्थान पर एथलीटों का परीक्षण करने का अधिकार रखता है।
+              <br><br>
+             <b class="hi" style="display: none;">प्रतियोगिता-से-बाहर परीक्षण के लिए वैध विलंब में निम्नलिखित शामिल हो सकते हैं:</b>
+              <ul style="font-size: 18px;">
+                <li class="hi" style="display: none;">प्रतिनिधि का पता लगाना</li>
+                  <li class="hi" style="display: none;"> प्रशिक्षण सत्र पूरा करना</li>
+                    <li class="hi" style="display: none;"> आवश्यक चिकित्सा उपचार प्राप्त करना</li>
+                      <li class="hi" style="display: none;"> फोटो पहचान पत्र प्राप्त करना</li>
+                        <li class="hi" style="display: none;">अधिकारी द्वारा अनुमोदित कोई अन्य उचित परिस्थितियाँ</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="img2">
+      <img src="img99.jpg" alt="" style="height:236px ; width: 100%;">
+    </div>
+
+  
+
+    <div class="main-div">
+      <h2 class="heading en">Rights & Responsibilities</h2>
+      <h2 class="heading hi" style="display: none;">अधिकार और जिम्मेदारियाँ</h2>
+      <div class="sub-divs">
+        <div class="sub-div">
+          
+          <p class="en" style="font-weight: 500; font-size: 3rem;">Rights</p>
+          <p class="hi" style="display: none; font-weight: 500; font-size: 3rem;">अधिकार</p>
+          <ul class="hidden-text" style="text-align: left; font-size: 1.3rem; font-weight: 400;">
+            <li class="en">To be accompanied by a representative and/or interpreter of their choice</li>
+            <li class="hi" style="display: none;">अपनी पसंद के प्रतिनिधि और/या दुभाषिया के साथ आना होगा</li>
+            <li class="en">To hydrate (unless the sample provided does not meet the requirement for suitable specific gravity for analysis)</li>
+            <li class="hi" style="display: none;">हाइड्रेट करना (जब तक कि प्रदान किया गया नमूना विश्लेषण के लिए उपयुक्त विशिष्ट गुरुत्व की आवश्यकता को पूरा नहीं करता)</li>
+             <li class="en"> For a delay for valid reasons as defined</li>
+             <li class="hi" style="display: none;"> निर्धारित वैध कारणों से देरी के लिए</li>
+              <li class="en"> For additional information about the sample-collection process</li>
+              <li class="hi" style="display: none;"> नमूना-संग्रह प्रक्रिया के बारे में अतिरिक्त जानकारी के लिए</li>
+              <li class="en"> Request modifications if they have a disability</li>
+              <li class="hi" style="display: none;"> यदि वे विकलांग हैं तो संशोधन का अनुरोध करें</li>
+              <li class="en"> Document any concerns they have with the process</li>
+              <li class="hi" style="display: none;">प्रक्रिया के संबंध में उनकी किसी भी चिंता का दस्तावेजीकरण करें</li>
+          </ul>
+        
+        </div>
+        <div class="sub-div">
+         
+          <p class="en" style="font-weight: 500; font-size: 3rem;">Responsibilities</p>
+          <p class="hi" style="display: none; font-weight: 500; font-size: 3rem;">जिम्मेदारियों</p>
+          <ul class="hidden-text" style="text-align: left; font-size: 1.3rem; font-weight: 400;">
+            <li class="en">Be aware of and comply with the Anti-Doping Policy (including the provision of accurate Whereabouts information)</li>
+            <li class="hi" style="display: none;">एंटी-डोपिंग नीति के बारे में जागरूक रहें और उसका अनुपालन करें (सटीक ठहरने की जानकारी के प्रावधान सहित)</li>
+              <li class="en"> Be available for and comply with sample collection procedures</li>
+              <li class="hi" style="display: none;"> नमूना संग्रहण प्रक्रियाओं के लिए उपलब्ध रहें और उनका अनुपालन करें</li>
+                <li class="en"> Remain insight of the official at all the times until the sample collection procedures are complete</li>
+                <li class="hi" style="display: none;"> नमूना संग्रहण प्रक्रिया पूरी होने तक हर समय अधिकारी की निगरानी में रहें</li>
+                  <li class="en"> Report to the dope control station as soon as possible </li>
+                  <li class="hi" style="display: none;">जितनी जल्दी हो सके डोप नियंत्रण स्टेशन को रिपोर्ट करें</li>
+                    <li class="en"> Handle the equipment, self-administer the sample collection and split, seal and secure the sample</li>
+                    <li class="hi" style="display: none;"> उपकरण को संभालना, नमूना संग्रह को स्वयं प्रबंधित करना और नमूने को विभाजित करना, सील करना और सुरक्षित करना</li>
+                      <li class="en"> Complete all documentation and ensure it is accurate and signed</li>
+                      <li class="hi" style="display: none;"> सभी दस्तावेज़ पूरे करें और सुनिश्चित करें कि वे सटीक और हस्ताक्षरित हैं</li>
+                        <li class="en"> Be aware of prohibited Substances</li>
+                        <li class="hi" style="display: none;"> प्रतिबंधित पदार्थों से सावधान रहें</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <div class="container5 my-3" style="max-width: 1600px; margin: 0 auto;">
+      <div class="position-relative p-4 text-center text-muted bg-light border border-dashed rounded-5 shadow-sm" style="background-color: #f8f9fa; border-color: #ddd;">
+        <!-- SVG Icon -->
+    
+        <!-- Title -->
+        <h1 class="en text-body-emphasis" style="font-size: 2.2rem; font-weight: 700; color: #343a40; margin-bottom: 20px;">
+          Athletes with Disabilities
+        </h1>
+        <h1 class="hi text-body-emphasis" style="display: none; font-size: 2.2rem; font-weight: 700; color: #343a40; margin-bottom: 20px;">
+          विकलांग खिलाड़ी
+        </h1>
+        
+        <!-- Description -->
+        <p class="col-lg-6 mx-auto mb-3 en" style="font-size: 1rem; color: #6c757d; line-height: 1.6;">
+          To ensure that testing remains a fair and positive experience for all athletes, NADA India sensitizes the SCP and also allows those with disabilities the certain modifications during the testing process.
+        </p>
+        <p class="col-lg-6 mx-auto mb-3 hi" style="display: none; font-size: 1rem; color: #6c757d; line-height: 1.6;">
+          यह सुनिश्चित करने के लिए कि परीक्षण सभी एथलीटों के लिए एक निष्पक्ष और सकारात्मक अनुभव बना रहे, नाडा इंडिया एससीपी को संवेदनशील बनाता है और विकलांग लोगों को परीक्षण प्रक्रिया के दौरान कुछ संशोधनों की अनुमति भी देता है।
+        </p>
+        
+        <!-- Download Button -->
+        <a href="Testing_1.pdf" download class="btn btn-success px-4 mb-3" style="font-size: 1rem; padding: 10px 20px; background-color: #1f2521c3; border:2px solid goldenrod; border-radius: 25px; transition: background-color 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-arrow-down me-2" viewBox="0 0 16 16">
+            <path d="M8 0a2 2 0 0 1 2 2v4.5h1.5a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6.5H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6zm3 10a.5.5 0 0 1-.5-.5V7h-2V6h2V5a.5.5 0 0 1 1 0v1h2v1h-2v2.5a.5.5 0 0 1-.5.5zM3 10a.5.5 0 0 1-.5-.5V6.5a.5.5 0 0 1 .5-.5H4v1H3.5v2H4v1H3.5z"/>
+          </svg>
+          Download <br>ANNEX A of ISTI 2023
+        </a>
+      </div>
+    </div>
+    
+    
+    
+
+
+
+    <div class="container3 col3-xxl-8 px-4 py-5" style="max-width: 1600px; margin: 0 auto; background-color: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+      <!-- Add the h1 heading -->
+      <h1 class="en" style="text-align: center; font-size: 36px; color: #212529; font-weight: 700; font-family: Arial, sans-serif;">
+        Registered Testing Pool
+      </h1>
+      <h1 class="hi" style=" display: none; text-align: center; font-size: 36px; color: #212529; font-weight: 700; font-family: Arial, sans-serif;">
+        पंजीकृत परीक्षण पूल
+      </h1>
+      
+      <div class="row3 flex-lg-row-reverse align-items-center g-5 py-5" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div class="col3-10 col3-sm-8 col3-lg-6" style="flex: 1; max-width: 100%; padding: 20px;">
+          <img src="female-gymnast-on-balance-beam.webp" class="d-block mx-lg-auto img-fluid" alt="Female Gymnast on Balance Beam" style="border-radius: 8px; max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" width="600" height="600" loading="lazy">
+        </div>
+        <div class="col3-lg-6" style="flex: 1; max-width: 100%; padding: 20px; display: flex; flex-direction: column; justify-content: center; text-align: left; margin-left: 20px;">
+          <p class="lead en" style="font-size: 18px; color: #4e5d6b; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+            NADA India is the final decision maker to place athletes in Registered Testing Pool (RTP). This selection is in accordance with the International Standard for Testing and Investigations as published by WADA. NADA India regularly reviews and updates the criteria for the RTP and revises the list in accordance with relevant criteria.
+            <br><br>
+            <b class="en">Every athlete in the Registered Testing Pool is required to:</b>
+          </p>
+          <p class="lead hi" style="display: none; font-size: 18px; color: #4e5d6b; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+            NADA इंडिया पंजीकृत परीक्षण पूल (RTP) में एथलीटों को रखने के लिए अंतिम निर्णय लेने वाला है। यह चयन WADA द्वारा प्रकाशित परीक्षण और जांच के लिए अंतर्राष्ट्रीय मानक के अनुसार है। NADA इंडिया नियमित रूप से RTP के मानदंडों की समीक्षा और अद्यतन करता है और प्रासंगिक मानदंडों के अनुसार सूची को संशोधित करता है।
+            <br><br>
+            <b class="hi" style="display: none;">पंजीकृत परीक्षण पूल में प्रत्येक एथलीट के लिए यह आवश्यक है:</b>
+          </p>
+          
+            <ul class="lead" style="color:black ;">
+              <li class="en">Inform NADA India about their whereabouts on a quarterly basis, in the manner as specified by the International Standard for Testing (ISTI)</li>
+              <li class="hi" style="display: none;">अंतर्राष्ट्रीय परीक्षण मानक (आईएसटीआई) द्वारा निर्दिष्ट तरीके से तिमाही आधार पर उनके ठिकाने के बारे में नाडा इंडिया को सूचित करना।</li>
+               <li class="en"> Update accurate and complete information at all times</li>
+               <li class="hi" style="display: none;"> हर समय सटीक और पूरी जानकारी अपडेट करें</li>
+                <li class="en">Make themselves available for testing at those whereabouts whenever required.</li>
+                <li class="hi" style="display: none;">जब भी आवश्यकता हो, वे स्वयं को उन स्थानों पर परीक्षण के लिए उपलब्ध रखें।</li>
+            </ul>
+            <p class="lead en" style="font-size: 18px; color: #4e5d6b; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              National Sports Federations (NSFs) must assist NADA India in establishing a National RTP of top national athletes. Whereabouts in accordance with international standards apply to them too.
+          </p>
+            <p class="lead hi" style="display: none; font-size: 18px; color: #4e5d6b; line-height: 1.6; margin-bottom: 30px; max-width: 600px; font-family: Arial, sans-serif;">
+              राष्ट्रीय खेल महासंघों (NSF) को शीर्ष राष्ट्रीय एथलीटों की राष्ट्रीय आरटीपी स्थापित करने में NADA इंडिया की सहायता करनी चाहिए। अंतर्राष्ट्रीय मानकों के अनुसार ठहरने की जगह उन पर भी लागू होती है।
+          </p>
+          <div class="d-grid gap-3" style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 30px;">
+            <button type="button" class="en btn btn-primary btn-lg px-4 py-3" style="background-color: #1d1f22; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; border:2px solid goldenrod ;" onclick="window.location.href='testing_2.pdf';">
+              RTP List
+            </button>
+            <button type="button" class="hi btn btn-primary btn-lg px-4 py-3" style="display: none; background-color: #1d1f22; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; border:2px solid goldenrod ;" onclick="window.location.href='testing_2.pdf';">
+              आरटीपी सूची
+            </button>
+            <button type="button" class="en btn btn-outline-secondary btn-lg px-4 py-3" style="border: 2px solid goldenrod; border-radius: 8px; color: #1d1f22; background: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;" onclick="window.location.href='testing_3.pdf';">
+              Requirements for RTP Athletes & Instructions on Use of ADAMS
+            </button>
+            <button type="button" class="hi btn btn-outline-secondary btn-lg px-4 py-3" style="display: none; border: 2px solid goldenrod; border-radius: 8px; color: #1d1f22; background: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;" onclick="window.location.href='testing_3.pdf';">
+              आरटीपी एथलीटों के लिए आवश्यकताएँ और एडम्स के उपयोग पर निर्देश
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+
+    <div class="main3-div" style="width: 100%; display: flex; justify-content: space-between; gap: 20px;">
+      <!-- First Sub-Div -->
+      <div class="sub31-div" style="flex: 1; background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+        <h1 class="en" style="font-size: 3rem; color: #333; font-weight: 700; align-items: center;">ADAMS & Whereabouts</h1>
+        <h1 class="hi" style="display: none; font-size: 3rem; color: #333; font-weight: 700; align-items: center;">एडम्स और ठिकाना</h1>
+        <p class="en" style="font-size: 1.5rem; color: #666; font-weight: 400;">All athletes in the RTP need to provide accurate whereabouts information every quarter in advance. While on travel - planned or unplanned, Anti-Doping Administration & Management System (ADAMS) should be used, even for unplanned emergencies. Clear instructions should be provided to help in locating you easily. If you live in rural areas, DCOs may need guidance to find you. You may fill this in the Additional information section on ADAMS.</p>
+        <p class="hi" style="display: none; font-size: 1.5rem; color: #666; font-weight: 400;">आरटीपी में सभी एथलीटों को हर तिमाही में अपने ठिकाने की सटीक जानकारी पहले से देनी होगी। यात्रा के दौरान - चाहे वह नियोजित हो या अनियोजित, एंटी-डोपिंग एडमिनिस्ट्रेशन एंड मैनेजमेंट सिस्टम (ADAMS) का इस्तेमाल किया जाना चाहिए, यहाँ तक कि अनियोजित आपात स्थितियों के लिए भी। आपको आसानी से ढूँढ़ने में मदद करने के लिए स्पष्ट निर्देश दिए जाने चाहिए। यदि आप ग्रामीण क्षेत्रों में रहते हैं, तो DCO को आपको ढूँढ़ने के लिए मार्गदर्शन की आवश्यकता हो सकती है। आप इसे ADAMS पर अतिरिक्त जानकारी अनुभाग में भर सकते हैं।</p>
+        <a href="https://adams.wada-ama.org/adams/login.do?prompt=true&nopopup=true">Login to ADAMS...</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;">
+          <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.5 8.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 0 1z"/>
+        </svg>
+      </div>
+    
+      <!-- Second Sub-Div -->
+      <div class="sub32-div" style="flex: 1; background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+        <div class="sub-sub-div">
+            <p class="en main-text1" style="font-size: 1rem; color: #fff;">How to update Whereabouts</p>
+            <p class="hi main-text1" style="display: none; font-size: 1rem; color: #fff;">अपना ठिकाना कैसे अपडेट करें</p>
+            <p class="en hidden-text1" style="font-size: 0.9rem; color: #fcb400; text-align: left;">Athletes should use ADAMS to update their whereabouts information. All athletes in the RTP need to provide accurate whereabouts information every quarter in advance.
+              <br><br>
+              This information must include home address, email address, phone number, work schedule, training venues and training schedule. In addition they must also provide overnight accommodation addresses and competition schedules. ADAMS can and should be used even while travelling or for unplanned emergencies. It will help DCOs find them on any given day.
+              <br><br>
+              Provide clear instructions to be easily located. If you live in a rural area, DCOs may need guidance to find you. Fill this in the Additional information section on ADAMS. When in competition, always include the competition name and location clearly.
+              <br><br>
+              ADAMS also has an SMS service (provided you enter your phone number on your profile) to help update information. Athletes can save the SMS number provided on their website and use it accordingly. They can also use the Athlete Central App to submit and update whereabouts information.</p>
+            <p class="hi hidden-text1" style="display: none; font-size: 0.9rem; color: #fcb400; text-align: left;">एथलीटों को अपने ठिकाने की जानकारी अपडेट करने के लिए ADAMS का उपयोग करना चाहिए। RTP में सभी एथलीटों को हर तिमाही में अपने ठिकाने की सटीक जानकारी पहले से उपलब्ध करानी होगी।
+              <br><br>
+              इस जानकारी में घर का पता, ईमेल पता, फ़ोन नंबर, कार्यसूची, प्रशिक्षण स्थल और प्रशिक्षण कार्यक्रम शामिल होना चाहिए। इसके अलावा उन्हें रात भर ठहरने के पते और प्रतियोगिता कार्यक्रम भी प्रदान करने होंगे। ADAMS का उपयोग यात्रा करते समय या अनियोजित आपात स्थितियों के लिए भी किया जा सकता है और किया जाना चाहिए। यह DCO को किसी भी दिन उन्हें खोजने में मदद करेगा।
+              <br><br>
+              आसानी से पता लगाने के लिए स्पष्ट निर्देश प्रदान करें। यदि आप ग्रामीण क्षेत्र में रहते हैं, तो DCO को आपको खोजने के लिए मार्गदर्शन की आवश्यकता हो सकती है। इसे ADAMS पर अतिरिक्त जानकारी अनुभाग में भरें। प्रतियोगिता में भाग लेने के दौरान, हमेशा प्रतियोगिता का नाम और स्थान स्पष्ट रूप से शामिल करें।
+              <br><br>
+              एडम्स के पास जानकारी अपडेट करने में मदद के लिए एक एसएमएस सेवा भी है (बशर्ते आप अपनी प्रोफ़ाइल पर अपना फ़ोन नंबर दर्ज करें)। एथलीट अपनी वेबसाइट पर दिए गए एसएमएस नंबर को सहेज सकते हैं और उसका उपयोग तदनुसार कर सकते हैं। वे एथलीट सेंट्रल ऐप का उपयोग करके ठहरने की जगह की जानकारी सबमिट और अपडेट भी कर सकते हैं.</p>
+        </div>
+        <div class="sub-sub-div">
+            <p class="en main-text1" style="font-size: 1rem; color: #fff;">Whereabouts Failures</p>
+            <p class="hi main-text1" style="display: none; font-size: 1rem; color: #fff;">ठिकाना विफलताएं</p>
+            <p class="hidden-text1" style="font-size: 0.9rem; color: #fcb400; text-align: left;">Three whereabouts failures — failure to inform accurately or missed tests in a 12 month period — may be considered an Anti-Doping Rule Violation (ADRV) and result in sanctions
+              <br><br><b class="en">Filing Failure</b>
+
+           <br><br> Whereabouts must be submitted to NADA India by the deadline. The filing is considered a failure </p>
+            <p class="hi hidden-text1" style="display: none; font-size: 0.9rem; color: #fcb400; text-align: left;">तीन बार ठहरने की जगह की जानकारी न देना - 12 महीने की अवधि में सही जानकारी न देना या परीक्षण में चूक जाना - एंटी-डोपिंग नियम उल्लंघन (एडीआरवी) माना जा सकता है और इसके परिणामस्वरूप प्रतिबंध लग सकते हैं
+              <br><br><b class="hi" style="display: none;">फाइलिंग विफलता</b>
+
+           <br><br> ठिकाना संबंधी जानकारी NADA इंडिया को समय सीमा के भीतर प्रस्तुत करनी होगी। फाइलिंग को विफल माना जाता है </p>
+              <ul class="hidden-text1" style="text-align: left;">
+                <li class="en">If it is not submitted by the deadline.</li>
+                <li class="hi" style="display: none;">यदि इसे समय सीमा तक प्रस्तुत नहीं किया जाता है।</li>
+                 <li class="en"> If it is inaccurate or incomplete.</li>
+                 <li class="hi" style="display: none;"> यदि यह गलत या अपूर्ण है।</li>
+                 <li class="en"> If it does not include all required information. Eg: it omits to declare a regular activity or location athlete is in, during the quarter.</li>
+                 <li class="hi" style="display: none;"> यदि इसमें सभी आवश्यक जानकारी शामिल नहीं है। उदाहरण के लिए: इसमें तिमाही के दौरान एथलीट की नियमित गतिविधि या स्थान की घोषणा करना छोड़ दिया गया है।</li>
+                 <li class="en"> If an athlete is not found at the listed location when attempted.</li>
+                 <li class="hi" style="display: none;"> यदि प्रयास करने पर एथलीट सूचीबद्ध स्थान पर नहीं मिलता है।</li>
+              </ul>
+            
+            <p class="en hidden-text1" style="font-size: 0.9rem; color: #fcb400; text-align: left;">
+              <b>Missed Test</b> <br>
+Athletes in the RTP will receive a missed test if they are unavailable for testing during the 60 minutes window indicated in their Whereabouts. Athletes are accountable for the entire 60 minutes slot and must be available. Even if the DCO does not arrive at the beginning of the time slot, athletes must remain available. Athletes can be notified at any time during the window.
+            </p>
+            <p class="hi hidden-text1" style="display: none; font-size: 0.9rem; color: #fcb400; text-align: left;">
+              <b>Missed Test</b> <br>
+              आरटीपी में एथलीट अगर अपने व्हेयरअबाउट्स में दर्शाए गए 60 मिनट की अवधि के दौरान परीक्षण के लिए उपलब्ध नहीं होते हैं, तो उन्हें एक मिस्ड टेस्ट मिलेगा। एथलीट पूरे 60 मिनट के स्लॉट के लिए जिम्मेदार हैं और उन्हें उपलब्ध रहना चाहिए। भले ही डीसीओ समय स्लॉट की शुरुआत में न पहुंचे, एथलीटों को उपलब्ध रहना चाहिए। एथलीटों को विंडो के दौरान किसी भी समय सूचित किया जा सकता है।
+            </p>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-content">
+        <div class="img" style="background-color: white; border-radius: 20px; width: 150px; text-align: center;"><img src="th.jpg" alt=""></div>
+        <div class="contact-us">
+            <h2 class="fifth-h2" style="color: white; margin: auto;">Contact Us</h2>
+            <section ><span style="color: white; width: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, vero.</span></section>
+            <section><span style="color: white;">+91-11-24368274</span></section>
+            <section class="mail"><span style="color: white;">info[dot]nada[at]nic[dot]in</span></section>
+        </div>
+        <div class="links" style="text-align: center;">
+            <h2 class="sixth-h2" style="color: white; margin: auto;">Links</h2>
+            <ul style="text-align: center;">
+              <li style="color: white; list-style-type: none; "><a href="index.html" style="color: white; text-decoration: none;">HOME</a></li>
+              <li style="color: white; list-style-type: none;"><a href="index_about.html" style="color: white; text-decoration: none;">About</a></li>
+              <li style="color: white; list-style-type: none;"><a href="index_testing.html" style="color: white; text-decoration: none;">Athlete Testing</a></li>
+              <li style="color: white; list-style-type: none;"><a href="https://www.wada-ama.org/en/prohibited-list#search-anchor" style="color: white; text-decoration: none;">Prohibited Substances</a></li>
+              <li style="color: white; list-style-type: none;"><a href="index_edu.html" style="color: white; text-decoration: none;">Education and awareness</a></li>
+              <li style="color: white; list-style-type: none;"><a href="index-tue.html" style="color: white; text-decoration: none;">TUE</a></li>
+          </ul>
+        </div>
+        <div class="follow-us" style="text-align: center;">
+            <h2 class="seventh-h2" style="color: white; margin: auto;">Follow Us</h2>
+            <ul style="display: flex; margin: 58px 0 0 43px;">
+                <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="fb.svg" alt=""></li>
+                <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="insta.svg" alt=""></li>
+                <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="twitter.svg" alt=""></li>
+                <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="tr.svg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
