@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        body {
+            font-family: Poppins;
+            overflow-x: hidden;
+        }
+        .custom-navbar {
+            padding: 40px 50px 50px 50px;
+            width: 100vw;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #BEBEBE;
+        }
+        .left-list {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            font-size: 25px;
+            font-weight: bold;
+            width: 17%;
+        }
+        .right-list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40% !important;
+        }
+        .item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+            border-bottom: 2px solid #BEBEBE;
+        }
+        .item-1:hover,
+        .item-2:hover,
+        .item-3:hover,
+        .item-4:hover,
+        .item-5:hover,
+        .item-6:hover {
+            border-bottom: 2px solid #27C5FF;
+        }
+        .custom-navbar .btn-primary{
+            background-color: white;
+            border: none;
+        }
+        .custom-navbar .btn-primary img{
+            height: 29px;
+        }
+        .custom-navbar .btn-primary:hover{
+            background-color: white;
+        }
+        .footer{
+            height: 60vh;
+            width: 100vw;
+            background-color: rgb(68 59 59);
+        }
+
+        .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: rgb(31, 26, 26);
+    position: relative;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+}
+.img {
+    place-self: center;
+}
+.img img {
+    border-radius: 20%;
+    max-width: 100px;
+}
+.contact-us, .links, .follow-us {
+    text-align: center;
+}
+.contact-us section {
+    text-align: left;
+    margin: 20px 0;
+}
+.links ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+.links ul li {
+    padding: 5px 0;
+    color: white;
+}
+.follow-us ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+.follow-us ul li img {
+    height: 30px;
+    margin: 0 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="custom-navbar">
+        <div class="left-list"> <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="icon.svg" alt=""></button>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Welcome to Anti-Doping</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>Ensuring a dopefree environment for athletes and sports</p>
+
+                <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_result.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Result Management</a></button>
+                  </div><br>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_resources.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Resources</a></button>
+                  </div><br>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index_testing.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Athlete Testing</a></button>
+                  </div><br>
+                
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="index-tue.html" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Therapeutic Use Exemption</a></button>
+                  </div>
+                  <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                    <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a href="https://docs.google.com/forms/d/1IpUZLCEWSLM-SlGfUqPGC4GBnnVWrfMVqBVOrTHXGHk/edit" class="awarenessanchor" style="color: black; text-decoration: none; background-color: white; border: none;">Report And Feedback</a></button>
+                  </div>
+              </div>
+            </div>DopingDefiance <a href="https://nadaindia.yas.gov.in/" style="margin-left: 30px;">
+                <img width="180" height="45" src="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png" class="attachment-large size-large wp-image-6456" alt="" srcset="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png 1024w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-300x89.png 300w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-768x229.png 768w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1536x458.png 1536w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1.png 1730w" sizes="(max-width: 800px) 100vw, 800px"></a></div>
+                <div class="right-list">
+                    <div class="item-1"><a style="color: black; text-decoration: none;" href="index.html">HOME</a></div>
+                    <div class="item-3"><a style="color: black; text-decoration: none;" href="index_edu.html">EDUCATION</a></div>
+                    <div class="item-4"><a style="color: black; text-decoration: none;" href="index_blog.html">BLOG</a></div>
+                    <div class="item-5"><a style="color: black; text-decoration: none;" href="index_news.html">NEWS</a></div>
+                </div>
+    </div>
+    <div class="intro" style="display: flex; margin-top: 75px; height: 50vh;">
+        <div class="header" style="font-size: 35px; font-weight: bold; width: 50%;
+        display: flex; align-items: center; padding: 20px;">The Role of Antidoping Education in Shaping Future Athletes</div>
+        <div  style="width: 50%; display: flex; justify-content: center; align-items: center;"><img src="fourth.jpeg.jpg" alt="" style="width: 30vw;  border-radius: 5px;"></div>
+    </div>
+    <div class="part-two" style="height: 70vh; width: 100vw; display: flex; margin-top: 70px;">
+        <div class="left-img" style="width: 50%; display: flex; justify-content: center; align-items: center;"><img src="" alt=""><img src="fifth.jpeg.jpg" alt="" style="width: 30vw; border-radius: 5px;"></div>
+        <div class="right-text" style="width: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; ">The foundation of ethical sportsmanship begins with education. Antidoping education is not merely a set of rules but a philosophy that shapes the mindset of future athletes. In a world where the stakes are high and competition fierce, young athletes must be equipped with the knowledge to navigate challenges without compromising their values.
+
+            Doping often stems from ignorance or undue pressure to excel. Athletes may not fully understand the long-term consequences of using performance-enhancing substances. Through antidoping education, they learn about the risks associated with these practices, including severe health issues and the potential to damage their reputations permanently..</div>
+    </div>
+    <div class="part-three" style="height: 70vh; width: 100vw; display: flex; margin-top: 70px;">
+        <div class="left-text" style=" padding: 10px; width: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; "><img src="" alt="">
+            Beyond health risks, antidoping education emphasizes the moral implications of cheating. It instills in athletes the importance of fair play and respect for their competitors. Workshops, interactive sessions, and e-learning modules make these lessons engaging and impactful.
+
+Parents, coaches, and teachers play an equally critical role. By promoting antidoping values at an early stage, they create a supportive environment that discourages unethical behavior. Educational campaigns also teach young athletes to handle the pressure of winning gracefully, emphasizing that true success lies in effort and perseverance.
+
+Antidoping education is more than a preventive measure; it’s a cornerstone of character-building. By nurturing a generation that values integrity over shortcuts, we ensure that sports remain a celebration of human excellence and hard work.</div>
+        <div class="right-img" style="width: 50%; display: flex; justify-content: center; align-items: center;"><img src="third.webp" alt="" style="width: 30vw; border-radius: 5px;"></div>
+    </div> 
+    <div class="footer">
+        <div class="footer-content">
+            <div class="img" style="background-color: white; border-radius: 20px; width: 150px; text-align: center;"><img src="th.jpg" alt=""></div>
+            <div class="contact-us">
+                <h2 class="fifth-h2" style="color: white; margin: auto;">Contact Us</h2>
+                <section ><span style="color: white; width: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, vero.</span></section>
+                <section><span style="color: white;">+91-11-24368274</span></section>
+                <section class="mail"><span style="color: white;">info[dot]nada[at]nic[dot]in</span></section>
+            </div>
+            <div class="links" style="text-align: center; ">
+                <h2 class="sixth-h2" style="color: white; margin: auto;">Links</h2>
+                <ul style="text-align: left; margin-left: 56px;">
+                    <li style="color: white; list-style-type: none; "><a href="index.html" style="color: white; text-decoration: none;">HOME</a></li>
+                    <li style="color: white; list-style-type: none;"><a href="index_about.html" style="color: white; text-decoration: none;">About</a></li>
+                    <li style="color: white; list-style-type: none;"><a href="index_testing.html" style="color: white; text-decoration: none;">Athlete Testing</a></li>
+                    <li style="color: white; list-style-type: none;"><a href="https://www.wada-ama.org/en/prohibited-list#search-anchor" style="color: white; text-decoration: none;">Prohibited Substances</a></li>
+                    <li style="color: white; list-style-type: none;"><a href="index_edu.html" style="color: white; text-decoration: none;">Education and awareness</a></li>
+                    <li style="color: white; list-style-type: none;"><a href="index-tue.html" style="color: white; text-decoration: none;">TUE</a></li>
+                </ul>
+            </div>
+            <div class="follow-us" style="text-align: center;">
+                <h2 class="seventh-h2" style="color: white; margin: auto;">Follow Us</h2>
+                <ul style="display: flex; margin: 58px 0 0 43px;">
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="fb.svg" alt=""></li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"> <a href="https://www.instagram.com/doping_defiance"> <img src="insta.svg" alt=""> </a></li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"> <a href="https://x.com/doping_defiance"> <img src="twitter.svg" alt=""> </a> </li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"> <a href="https://www.threads.net/@doping_defiance"> <img src="tr.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

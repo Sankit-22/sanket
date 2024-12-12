@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+        body {
+            font-family: Poppins;
+        }
+
+        .custom-navbar {
+            padding: 40px 50px 50px 50px;
+            width: 100vw;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #BEBEBE;
+        }
+
+        .left-list {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            font-size: 25px;
+            font-weight: bold;
+            width: 17%;
+        }
+
+        .right-list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40% !important;
+        }
+
+        .item-1,
+        .item-2,
+        .item-3,
+        .item-4,
+        .item-5,
+        .item-6 {
+            border-bottom: 2px solid #BEBEBE;
+        }
+
+        .item-1:hover,
+        .item-2:hover,
+        .item-3:hover,
+        .item-4:hover,
+        .item-5:hover,
+        .item-6:hover {
+            border-bottom: 2px solid #27C5FF;
+        }
+
+        .custom-navbar .btn-primary {
+            background-color: white;
+            border: none;
+        }
+
+        .custom-navbar .btn-primary img {
+            height: 29px;
+        }
+
+        .custom-navbar .btn-primary:hover {
+            background-color: white;
+        }
+
+        .text {
+            position: relative;
+            font-size: 40px;
+            font-weight: bold;
+            color: #0b3dc6;
+        }
+
+        .first-text {
+            color: black;
+        }
+
+        .text-container {
+            width: 30vw;
+            margin-top: 93px;
+            margin-left: 50px;
+        }
+
+        .second-text::before {
+            content: "";
+            position: absolute;
+            top: 70px;
+            left: -237px;
+            height: 39%;
+            width: 388%;
+            background-color: white;
+            border-left: 2px solid #0b3dc6;
+            animation: animate 3s steps(16) infinite;
+        }
+
+        @keyframes animate {
+
+            40%,
+            60% {
+                left: 100%;
+            }
+
+            100% {
+                left: -237px;
+            }
+        }
+
+        .tagline {
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 26px;
+        }
+
+        .news-grid-one {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            width: 55vw;
+        }
+        .card {
+            place-self: center;
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .introduce-part {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .trending-header {
+            font-size: 25px;
+            font-weight: 500;
+            padding: 15px;
+            margin-left: 73px;
+            width: 30vw;
+            color: rgb(215, 56, 56);
+        }
+
+        .news-grid-two {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            margin-top: 40px;
+        }
+
+        .explore-more {
+            width: 100vw;
+            display: flex;
+        }
+
+        .explore-more-left {
+            width: 70%;
+        }
+
+        .explore-more-right {
+            width: 30%;
+            display: flex;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            height: 55vh;
+            width: 100vw;
+            background-color: rgb(32, 27, 27);
+            position: relative;
+        }
+
+        .footer-content {
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+            height: 90%;
+            width: 80vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+        }
+
+        .img {
+            place-self: center;
+        }
+
+        .img img {
+            border-radius: 20%;
+        }
+
+        .contact-us {
+            text-align: center;
+        }
+
+        .contact-us section {
+            text-align: left;
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+
+        .contact-us .mail {
+            margin-top: 40px;
+        }
+
+        .links ul {
+            margin-left: 33px;
+            margin-top: 20px;
+        }
+
+        .links ul li {
+            padding: 10px;
+        }
+
+        .follow-us ul li img {
+            height: 30px;
+        }
+
+        @media (max-width: 480px) {
+            .right-list {
+                display: none;
+            }
+            .item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+            border: none;
+            padding: 5px 0px;
+        }
+        .item-1:hover,
+        .item-2:hover,
+        .item-3:hover,
+        .item-4:hover,
+        .item-5:hover,
+        .item-6:hover {
+            background-color: #BEBEBE;
+        }
+            .offcanvas-items {
+                display: block;
+                font-size: 12px;
+            }
+            .custom-navbar img{
+                margin-left: 50px;
+            }
+        }
+
+        @media (min-width: 481px) {
+            .offcanvas-items {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-navbar">
+        <div class="left-list"> <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="icon.svg"
+                    alt=""></button>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Welcome to Anti-Doping</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Ensuring a dopefree environment for athletes and sports</p>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="background-color: white; color: black; border: none;">
+                            Results management
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Antidoping
+                                    rules violation</a></li>
+                            <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Sanctions
+                                    under article 10.8</a></li>
+                            <li><a class="dropdown-item" href="#">UNESCO international convention</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="background-color: white; color: black; border: none;">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">Prohibited
+                                    list</a></li>
+                            <li><a class="dropdown-item" href="#" style="border-bottom: 1px solid #BEBEBE;">National
+                                    antidoping rules</a></li>
+                            <li><a class="dropdown-item" href="#">UNESCO international convention</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="background-color: white; color: black; border: none;">
+                            Athlete Testing
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"
+                                    style="border-bottom: 1px solid #BEBEBE;">In-competetion</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style="border-bottom: 1px solid #BEBEBE;">Out-competetion</a></li>
+                            <li><a class="dropdown-item" href="#">Rights and Responsibilities</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                        <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a
+                                href="" class="awarenessanchor"
+                                style="color: black; text-decoration: none; background-color: white; border: none;">Awareness
+                                and health risks</a></button>
+                    </div>
+                    <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                        <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a
+                                href="" class="awarenessanchor"
+                                style="color: black; text-decoration: none; background-color: white; border: none;">Antidoping
+                                Disciplinary panel</a></button>
+                    </div>
+                    <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                        <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a
+                                href="" class="awarenessanchor"
+                                style="color: black; text-decoration: none; background-color: white; border: none;">Educational
+                                videos</a></button>
+                    </div>
+                    <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                        <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a
+                                href="" class="awarenessanchor"
+                                style="color: black; text-decoration: none; background-color: white; border: none;">Therapeutic
+                                Use Exemption</a></button>
+                    </div>
+                    <div class="btn awarenessbtn" style="background-color: white; border: none;">
+                        <button class="awarenessbtn2" style="border: none; background-color: white; padding: 0;"><a
+                                href="" class="awarenessanchor"
+                                style="color: black; text-decoration: none; background-color: white; border: none;">Report
+                                And Feedback</a></button>
+                    </div>
+                    <div class="offcanvas-items" style="display: flex; flex-direction: column; margin-left: 13px;">
+                        <a class="item-1" style="text-decoration: none; color: black; font-weight: 500;">HOME</a>
+                        <a class="item-2" style="text-decoration: none; color: black; font-weight: 500;">ABOUT</a>
+                        <a class="item-3" style="text-decoration: none; color: black; font-weight: 500;">SERVICES</a>
+                        <a class="item-4" style="text-decoration: none; color: black; font-weight: 500;">BLOG</a>
+                        <a class="item-5" style="text-decoration: none; color: black; font-weight: 500;">NEWS</a>
+                        <a class="item-6" style="text-decoration: none; color: black; font-weight: 500;">PARTNERS</a>
+                    </div>
+                </div>
+            </div>DopingDefiance <a href="https://nadaindia.yas.gov.in/" style="margin-left: 30px;">
+                <div>
+                    <img width="180" height="45"
+                    src="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png"
+                    class="attachment-large size-large wp-image-6456" alt=""
+                    srcset="https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1024x305.png 1024w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-300x89.png 300w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-768x229.png 768w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1-1536x458.png 1536w, https://nadaindia.yas.gov.in/wp-content/uploads/GOV-NADA-Logo-01-1.png 1730w"
+                    sizes="(max-width: 800px) 100vw, 800px">
+                </div></a>
+        </div>
+        <div class="right-list">
+            <div class="item-1">HOME</div>
+            <div class="item-3">EDUCATION</div>
+            <div class="item-4">BLOG</div>
+            <div class="item-5">NEWS</div>
+        </div>
+    </div>
+    <div class="introduce-part">
+        <div class="text-container">
+            <span class="text first-text">Welcome To The BlogPage of</span>
+            <span class="text second-text">DopingDefiance</span>
+            <div class="tagline">Promoting Integrity in sports : Explore Insights on Anti-Doping</div>
+        </div>
+        <div class="trending-part" style="width: 50%;">
+            <div class="trending-header">Explore Latest And Trending Blogs...</div>
+            <div class="news-grid-two">
+                <div class="card card-one" style="width: 18rem;">
+                    <img src="first.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Anti-Doping importance</h5>
+                        <p class="card-text">Understanding the Importance of Antidoping in Sports</p>
+                        <a href="blog1.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="card card-two" style="width: 18rem;">
+                    <img src="third.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Anti-Doping role </h5>
+                        <p class="card-text">The Role of Antidoping Education in Shaping Future Athletes</p>
+                        <a href="blog2.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="img"><img style="width: 100%; height: 250px; background-color: white;" src="th.jpg" alt=""></div>
+            <div class="contact-us">
+                <h2 class="fifth-h2" style="color: white; margin: auto;">Contact Us</h2>
+                <section><span style="color: white; width: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. In, vero.</span></section>
+                <section><span style="color: white;">+91-11-24368274</span></section>
+                <section class="mail"><span style="color: white;">info[dot]nada[at]nic[dot]in</span></section>
+            </div>
+            <div class="links" style="text-align: center;">
+                <h2 class="sixth-h2" style="color: white; margin: auto;">Links</h2>
+                <ul style="text-align: left;">
+                    <li style="color: white; list-style-type: none;">Home</li>
+                    <li style="color: white; list-style-type: none;">About</li>
+                    <li style="color: white; list-style-type: none;">Athlete testing</li>
+                    <li style="color: white; list-style-type: none;">Prohibited Substances</li>
+                    <li style="color: white; list-style-type: none;">Education and awareness</li>
+                    <li style="color: white; list-style-type: none;">TUE</li>
+                </ul>
+            </div>
+            <div class="follow-us" style="text-align: center;">
+                <h2 class="seventh-h2" style="color: white; margin: auto;">Follow Us</h2>
+                <ul style="display: flex; margin: 58px 0 0 43px;">
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="fb.svg" alt=""></li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="insta.svg" alt=""></li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="twitter.svg" alt=""></li>
+                    <li style="list-style-type: none; padding: 5px; height: 20px;"><img src="tr.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
