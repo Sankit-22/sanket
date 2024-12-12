@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>DopingDefiance</title>
+		<style>
+			form .btn:hover{
+				background-color: white;
+			}
+			form .btn{
+				font-family: 'Poppins';
+				font-weight: 600;
+			}
+			input{
+				font-family: 'Poppins';
+			}
+			#room{
+				font-family: 'Poppins';
+			}
+		</style>
+	</head>
+	<body>
+		<div class="join-container">
+			<header class="join-header">
+				<h1>DopingDefiance</h1>
+			</header>
+			<main class="join-main" style="height: 65vh !important;">
+				<div class="intro"><h2>Ready to join the fight against doping?</h2></div>
+				<form action="chat.html">
+					<div class="form-control" style="margin-top: 20px;">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+							style="border-radius: 10px; padding: 15px; border: none;"
+						/>
+					</div>
+					<div class="form-control">
+						<div class="info"><h3>Select which room you want to enter below</h3></div>
+						<label for="room" style="margin-top: 20px;">Room</label>
+						<select name="room" id="room" style="border-radius: 10px; border: none;">
+							<option value="Health Risks of Doping" >Health Risks of Doping</option>
+							<option value="Anti-Doping Awareness">Anti-Doping Awareness</option>
+							<option value="Athlete Support">Athlete Support</option>
+							<option value="Report Doping">Report Doping</option>
+							<option value="Coach & Parent Guidance">Coach & Parent Guidance</option>
+							<option value="General">General</option>
+							<option value="Awareness on Prohibited Substances">Awareness on Prohibited Substances</option>
+						</select>
+					</div>
+					<button type="submit" class="btn" style="border-radius: 10px; height: 40px;">Join Chat</button>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
